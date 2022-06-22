@@ -24,7 +24,7 @@ pipeline {
          }
          stage('Packer AMI Build'){
              steps {
-                 sh "terraform plan -out=tfplan -input=false"
+                 sh "packer build image.pkr.hcl"
              }
          }
       
