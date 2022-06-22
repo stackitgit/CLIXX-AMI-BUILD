@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ##Install the needed packages and enable the services(MariaDb, Apache)
 sudo yum update -y
 sudo yum install git -y

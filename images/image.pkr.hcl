@@ -16,7 +16,7 @@ variable "ami_version" {
 }
 
 variable "ami_name" {
-  default = "ami-stack-2.0"
+  default = "ami-stack-5.0"
 }
 
 variable "name" {
@@ -31,7 +31,7 @@ variable "component" {
 
 variable "aws_accounts" {
   type = list(string)
-  default= ["577701061234"]
+  default= ["577701061234","560089993749"]
 }
 
 variable "ami_regions" {
@@ -76,7 +76,8 @@ source "amazon-ebs" "amazon_ebs" {
   launch_block_device_mappings {
     delete_on_termination = true
     device_name           = "/dev/xvda"
-    encrypted             = false
+    encrypted             = true
+    kms_key_id            = "f0837c57-8a9f-43cb-adf9-4167838bde73"
     volume_size           = 10
     volume_type           = "gp2"
   }
