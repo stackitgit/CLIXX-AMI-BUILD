@@ -42,5 +42,5 @@ pipeline {
     }
 
 def getPackerPath(){
-       def PackerHome= tool name: '', type: 'biz.neustar.jenkins.plugins.packer.PackerInstallation'
+       def PackerHome= tool name: 'Packer', type: 'biz.neustar.jenkins.plugins.packer.PackerInstallation'
 }
