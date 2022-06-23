@@ -25,7 +25,7 @@ pipeline {
          stage('Packer AMI Build'){
              steps {
                  sh """
-                 cd images
+                 cd CLIXX-AMI-PACKER-BUILD/images
                  packer init .
                  packer build image.pkr.hcl
                  """
