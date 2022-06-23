@@ -24,9 +24,11 @@ pipeline {
         //  }
          stage('Packer AMI Build'){
              steps {
-                 sh "cd images
+                 sh """
+                 cd images
                  packer init .
-                 packer build image.pkr.hcl"
+                 packer build image.pkr.hcl
+                 """
              }
          }
       
