@@ -18,15 +18,15 @@ pipeline {
 
          stage('terraform init'){
              steps {
-                 sh "packer init . "
+                 sh "packer -v "
                  
          }
          }
-         stage('Packer AMI Build'){
-             steps {
-                 sh "packer build image.pkr.hcl"
-             }
-         }
+        //  stage('Packer AMI Build'){
+        //      steps {
+        //          sh "packer build image.pkr.hcl"
+        //      }
+        //  }
       
     }
 }
