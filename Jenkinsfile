@@ -16,9 +16,9 @@ pipeline {
            }
         }
 
-         stage('terraform init'){
+         stage('packer init'){
              steps {
-                 sh "packer -v "
+                 sh "packer.io init "
                  
          }
          }
