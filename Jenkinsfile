@@ -27,8 +27,7 @@ pipeline {
                  sh """
                  cd images
                  packer init .
-                //  packer build image.pkr.hcl
-                packer build -force .
+                 packer build -force .
                  """
              }
          }
