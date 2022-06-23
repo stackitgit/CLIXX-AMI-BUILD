@@ -18,7 +18,7 @@ pipeline {
 
          stage('terraform init'){
              steps {
-                 sh "packer init"
+                 sh "packer init . "
                  
          }
          }
