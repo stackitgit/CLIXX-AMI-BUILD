@@ -25,6 +25,9 @@ pipeline {
          stage('Packer AMI Build'){
              steps {
                  sh """
+                 export PACKER_LOG=1
+                 export PACKER_LOG_PATH=$WORKSPACE/packer.log
+                 echo "packer log path:" $PACKER_LOG_PATH
                  cd images
                  packer build . >> packer_build.tx
                  """
