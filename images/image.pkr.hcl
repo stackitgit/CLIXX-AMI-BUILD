@@ -1,3 +1,13 @@
+packer {
+  required_plugins {
+    docker = {
+      version = ">= 0.0.7"
+      source = "github.com/hashicorp/docker"
+    }
+  }
+}
+
+
 variable "region" {
   type    = string
   default = "us-east-1"
@@ -16,7 +26,7 @@ variable "ami_version" {
 }
 
 variable "ami_name" {
-  default = "ami-stack-5.0"
+  default = "ami-stack-6.0"
 }
 
 variable "name" {

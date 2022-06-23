@@ -16,17 +16,19 @@ pipeline {
            }
         }
 
-         stage('packer init'){
-             steps {
-                 sh "packer.io init "
-                 
-         }
-         }
-        //  stage('Packer AMI Build'){
+        //  stage('packer init'){
         //      steps {
-        //          sh "packer build image.pkr.hcl"
-        //      }
+        //          sh "packer.io init "
+                 
         //  }
+        //  }
+         stage('Packer AMI Build'){
+             steps {
+                 sh "cd images
+                 packer init .
+                 packer build image.pkr.hcl"
+             }
+         }
       
     }
 }
