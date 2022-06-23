@@ -26,7 +26,7 @@ pipeline {
              steps {
                  sh """
                  cd images
-                 packer build image.pkr.hcl >> packer_build.tx
+                 /usr/bin/packer build image.pkr.hcl >> packer_build.tx
                  """
              }
          }
