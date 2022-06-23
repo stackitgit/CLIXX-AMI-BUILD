@@ -26,7 +26,7 @@ pipeline {
              steps {
                  sh """
                  cd images
-                 packer validate>> packer_build.tx
+                 packer build . >> packer_build.tx
                  """
              }
          }
